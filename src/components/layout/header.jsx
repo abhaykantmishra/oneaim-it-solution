@@ -17,93 +17,133 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Menu, X } from "lucide-react"
 
 // Define dropdown content for each menu item
-const productEngineeringItems = [
+const cloudServicesItems = [
   {
-    title: "Product Development",
+    title: "Cloud Hosting",
     href: "#",
     description: "End-to-end product development services for startups and enterprises",
   },
   {
-    title: "UI/UX Design",
+    title: "Server Management",
     href: "#",
     description: "User-centered design services to create intuitive digital experiences",
   },
   {
-    title: "Mobile Development",
+    title: "Data Backup",
     href: "#",
     description: "Native and cross-platform mobile app development",
   },
   {
-    title: "Web Development",
+    title: "Cloud Security",
     href: "#",
     description: "Modern web applications built with the latest technologies",
   },
 ]
 
-const cloudDevOpsItems = [
+const webDevelopmentItems = [
   {
-    title: "Cloud Migration",
+    title: "Web App Development",
     href: "#",
     description: "Seamless migration to cloud platforms like AWS, Azure, and GCP",
   },
   {
-    title: "DevOps Automation",
+    title: "Custom website development",
     href: "#",
     description: "Streamline your development and operations with CI/CD pipelines",
   },
   {
-    title: "Infrastructure as Code",
+    title: "Ui & Ux Designing",
     href: "#",
     description: "Manage infrastructure with code for better scalability and reliability",
   },
   {
-    title: "Kubernetes & Containerization",
+    title: "E- Commerce Development",
+    href: "#",
+    description: "Container orchestration and management solutions",
+  },
+  {
+    title: "Api Development & Integration",
+    href: "#",
+    description: "Container orchestration and management solutions",
+  },
+  {
+    title: "Front-End Development",
+    href: "#",
+    description: "Container orchestration and management solutions",
+  },
+  {
+    title: "Back-End Development",
+    href: "#",
+    description: "Container orchestration and management solutions",
+  },
+  {
+    title: "DevOps & Cloud Services",
     href: "#",
     description: "Container orchestration and management solutions",
   },
 ]
 
-const enterprisePracticesItems = [
+const aimlSolutionsItems = [
   {
-    title: "Digital Transformation",
+    title: "Custom AI Development",
     href: "#",
     description: "Transform your business with modern digital solutions",
   },
   {
-    title: "Enterprise Architecture",
+    title: "AI Game Development",
     href: "#",
     description: "Design scalable and resilient enterprise systems",
   },
   {
-    title: "Legacy Modernization",
+    title: "AI Chatbot Development",
     href: "#",
     description: "Update legacy systems to modern technologies",
   },
   {
-    title: "Agile Consulting",
+    title: "Custom Machine Learning Development Services",
+    href: "#",
+    description: "Implement agile methodologies for better project outcomes",
+  },
+  {
+    title: "Ai Software Development",
+    href: "#",
+    description: "Implement agile methodologies for better project outcomes",
+  },
+  {
+    title: "Predictive Analytics Solutions",
+    href: "#",
+    description: "Implement agile methodologies for better project outcomes",
+  },
+  {
+    title: "Deep Learning Development  services",
+    href: "#",
+    description: "Implement agile methodologies for better project outcomes",
+  },
+  {
+    title: "Ai consultancy services",
     href: "#",
     description: "Implement agile methodologies for better project outcomes",
   },
 ]
 
-const industriesItems = [
+const digitalMarketingItems = [
   {
-    title: "FinTech",
+    title: "Meta ads",
     href: "#",
     description: "Financial technology solutions for banks and financial institutions",
   },
   {
-    title: "HealthTech",
+    title: "Google ads",
     href: "#",
     description: "Healthcare technology solutions for providers and patients",
   },
   {
-    title: "CleanTech",
+    title: "Instagram ads",
     href: "#",
     description: "Sustainable technology solutions for a greener future",
   },
   {
-    title: "HRTech",
+    title: "SEO",
     href: "#",
     description: "Human resources technology solutions for better workforce management",
   },
@@ -130,57 +170,58 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b">
+    <header className="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
-            <img
-              src="/placeholder.svg?height=40&width=120"
+            {/* <img
+              src="/vercel.svg?height=40&width=120"
               alt="OneAim"
               width={120}
               height={40}
               className="h-10 w-auto"
-            />
+            /> */}
+            <p className="font-extrabold text-xl">OneAim</p>
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Product Engineering</NavigationMenuTrigger>
+              <NavigationMenuItem >
+                <NavigationMenuTrigger className="bg-transparent">Cloud Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {productEngineeringItems.map((item) => (
+                    {cloudServicesItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Cloud & DevOps</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">Web Development</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {cloudDevOpsItems.map((item) => (
+                    {webDevelopmentItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Enterprise Practices</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">AI & ML Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {enterprisePracticesItems.map((item) => (
+                    {aimlSolutionsItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent">Digital Marketing</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {industriesItems.map((item) => (
+                    {digitalMarketingItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
@@ -222,10 +263,10 @@ export default function Header() {
                   <div className="flex-1 overflow-auto py-4">
                     <Accordion type="single" collapsible className="w-full">
                       <AccordionItem value="product-engineering">
-                        <AccordionTrigger className="px-4">Product Engineering</AccordionTrigger>
+                        <AccordionTrigger className="px-4">Cloud Services</AccordionTrigger>
                         <AccordionContent>
                           <div className="flex flex-col space-y-2 pl-4">
-                            {productEngineeringItems.map((item) => (
+                            {cloudServicesItems.map((item) => (
                               <Link
                                 key={item.title}
                                 href={item.href}
@@ -240,10 +281,10 @@ export default function Header() {
                       </AccordionItem>
 
                       <AccordionItem value="cloud-devops">
-                        <AccordionTrigger className="px-4">Cloud & DevOps</AccordionTrigger>
+                        <AccordionTrigger className="px-4">Web Development</AccordionTrigger>
                         <AccordionContent>
                           <div className="flex flex-col space-y-2 pl-4">
-                            {cloudDevOpsItems.map((item) => (
+                            {webDevelopmentItems.map((item) => (
                               <Link
                                 key={item.title}
                                 href={item.href}
@@ -258,10 +299,10 @@ export default function Header() {
                       </AccordionItem>
 
                       <AccordionItem value="enterprise-practices">
-                        <AccordionTrigger className="px-4">Enterprise Practices</AccordionTrigger>
+                        <AccordionTrigger className="px-4">AI & ML Solutions</AccordionTrigger>
                         <AccordionContent>
                           <div className="flex flex-col space-y-2 pl-4">
-                            {enterprisePracticesItems.map((item) => (
+                            {aimlSolutionsItems.map((item) => (
                               <Link
                                 key={item.title}
                                 href={item.href}
@@ -276,10 +317,10 @@ export default function Header() {
                       </AccordionItem>
 
                       <AccordionItem value="industries">
-                        <AccordionTrigger className="px-4">Industries</AccordionTrigger>
+                        <AccordionTrigger className="px-4">Digital Marketing</AccordionTrigger>
                         <AccordionContent>
                           <div className="flex flex-col space-y-2 pl-4">
-                            {industriesItems.map((item) => (
+                            {digitalMarketingItems.map((item) => (
                               <Link
                                 key={item.title}
                                 href={item.href}
