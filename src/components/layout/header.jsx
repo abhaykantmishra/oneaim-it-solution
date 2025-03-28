@@ -170,9 +170,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="w-full mx-auto text-center fixed top-0 z-50 bg-blue-300 backdrop-blur-sm border-none">
-      <div className="container mx-auto text-center ">
-        <div className="flex items-center justify-between h-20">
+    <header className="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm border-none">
+      <div className="container px-4 ">
+        <div className="flex items-center justify-between h-20 max-w-7xl mx-auto">
           <Link href="/" className="flex-shrink-0">
             {/* <img
               src="/vercel.svg?height=40&width=120"
