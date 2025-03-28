@@ -170,8 +170,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm border-b">
-      <div className="container mx-auto px-4">
+    <header className="w-full mx-auto text-center fixed top-0 z-50 bg-blue-300 backdrop-blur-sm border-none">
+      <div className="container mx-auto text-center ">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
             {/* <img

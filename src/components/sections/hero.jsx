@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 px-4">
-      <div className="container mx-auto text-center">
+    <section className="pt-32 pb-20 px-4 min-h-screen">
+      <div className="container mx-auto text-center max-w-6xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           From &apos;What If?&apos; to &apos;Here&apos;s How&apos;
         </h1>
