@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import FlowingLinesSVG from "../ui/flowing-lines"
 
 export default function CompanyStats() {
   return (
@@ -82,58 +83,16 @@ export default function CompanyStats() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          {/* <a
-            href="#contact"
-            className="bg-[#ff3b30] hover:bg-[#e62e24] text-white font-medium px-8 py-4 rounded-full text-lg transition-colors"
-          >
-            Get Launch Ready | Talk to Experts
-          </a> */}
-            <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
-                Get Launch Ready | Talk to Experts
-            </button>
+          <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
+              Get Launch Ready | Talk to Experts
+          </button>
         </motion.div>
       </div>
 
-      {/* Decorative wave lines */}
-      <div className="absolute top-0 right-0 w-1/2 h-full z-0 opacity-70">
-        <svg viewBox="0 0 500 800" preserveAspectRatio="none" className="w-full h-full">
-          <motion.path
-            d="M500,0 C400,150 300,250 500,350 C700,450 600,550 500,650 C400,750 300,800 500,800"
-            stroke="#ff3b30"
-            strokeWidth="1"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.3 }}
-            transition={{ duration: 2 }}
-          />
-          <motion.path
-            d="M520,0 C420,120 320,220 520,320 C720,420 620,520 520,620 C420,720 320,800 520,800"
-            stroke="#ff3b30"
-            strokeWidth="1"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.3 }}
-            transition={{ duration: 2, delay: 0.2 }}
-          />
-          <motion.path
-            d="M540,0 C440,100 340,200 540,300 C740,400 640,500 540,600 C440,700 340,800 540,800"
-            stroke="#3b82f6"
-            strokeWidth="1"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.3 }}
-            transition={{ duration: 2, delay: 0.4 }}
-          />
-          <motion.path
-            d="M560,0 C460,80 360,180 560,280 C760,380 660,480 560,580 C460,680 360,800 560,800"
-            stroke="#3b82f6"
-            strokeWidth="1"
-            fill="none"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 0.3 }}
-            transition={{ duration: 2, delay: 0.6 }}
-          />
-        </svg>
+      <div className="absolute top-0 right-0 h-full z-0 opacity-50 overflow-hidden">
+        {/* <img 
+          src="/images/lines.avif"
+        /> */}
       </div>
     </section>
   )
