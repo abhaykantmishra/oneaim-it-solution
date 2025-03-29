@@ -48,8 +48,8 @@ export default function CompanyCulture() {
                 <p className="text-sm text-gray-500 mt-1">{item.position}</p>
               </motion.div>
             ))}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 text-[#ffdddd] text-9xl font-serif">
-              "
+            <div className="font-serif absolute right-0 top-1/2 transform -translate-y-1/2 text-[#ffdddd] text-9xl">
+              &quot;
             </div>
           </motion.div>
 
