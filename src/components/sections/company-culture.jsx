@@ -23,8 +23,8 @@ const employeeQuotes = [
 
 export default function CompanyCulture() {
   return (
-    <section className="w-full py-6 md:py-12 bg-[#f8f9fc]">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="w-full bg-white">
+      <div className="bg-[#d8e5fa] py-4 md:py-10 rounded-3xl mx-auto px-4 max-w-7xl">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
           <motion.div
             className="w-full md:w-1/2 relative"
@@ -35,7 +35,7 @@ export default function CompanyCulture() {
             {employeeQuotes.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg px-4 py-2 mb-4 shadow-sm relative"
+                className="bg-white rounded-lg px-4 py-1 mb-2 shadow-sm relative"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -59,15 +59,17 @@ export default function CompanyCulture() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl text-[#1e2942] my-6">
+            <h2 className="text-xl md:text-2xl text-[#1e2942] mb-2 font-serif">
               A people-first culture thrives on valuing individuals above all else.
             </h2>
-            <p className="text-gray-600 my-4">
+            <p className="text-gray-600 my-4 text-sm" 
+              style={{fontSize:16}}
+            >
               At OneAim Technologies, our people-first culture thrives by valuing every individual and embracing
               diversity. We support our team with wellness initiatives and ensure every voice is heard. By prioritizing
               people and their well-being, we create a vibrant environment where everyone can grow and succeed together.
             </p>
-            <div className="flex justify-center">
+            <div className="flex md:block justify-center">
             <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
                 Explore Vibrant Life @ OneAim
             </button>

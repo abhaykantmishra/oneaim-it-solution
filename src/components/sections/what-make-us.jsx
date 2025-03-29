@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function WhatMakesUs() {
   return (
     <section className="w-full py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-12 gap-6">
        
           <motion.div
@@ -15,7 +15,7 @@ export default function WhatMakesUs() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#1e2942]">
-              What Makes <span className="text-[#1e2942]">azilen,</span> <span className="text-[#ff3b30]">Azilen</span>?
+              What Makes <span className="text-[#1e2942]">oneaim,</span> <span className="text-[#ff3b30]">OneAim</span>?
             </h2>
           </motion.div>
 

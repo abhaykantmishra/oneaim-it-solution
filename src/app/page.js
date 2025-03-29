@@ -8,6 +8,7 @@ import CompanyStats from "@/components/sections/company-stats"
 import Resources from "@/components/sections/resources"
 import CompanyCulture from "@/components/sections/company-culture"
 import ChatWidget from "@/components/chat-widget"
+import WhatMakesUs from "@/components/sections/what-make-us"
 
 import Culture from "@/components/sections/culture"
 import Features from "@/components/sections/features"
@@ -37,6 +38,7 @@ export default function HomePage() {
         <Testimonials />
         <Resources />
         <CompanyCulture />
+        <WhatMakesUs />
 
         {/* <Features /> */}
         {/* <Security /> */}
