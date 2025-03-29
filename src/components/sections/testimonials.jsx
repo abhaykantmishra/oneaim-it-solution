@@ -9,26 +9,26 @@ const testimonials = [
   {
     id: 1,
     content:
-      "Azilen Technologies delivered an impressive product and continues to create extensive project overviews that ensure effective collaboration. The team communicates clearly and manages the project cost-effectively. They are accessible and offer technical expertise to support a valuable partnership.",
+      "OneAim Technologies delivered an impressive product and continues to create extensive project overviews that ensure effective collaboration. The team communicates clearly and manages the project cost-effectively. They are accessible and offer technical expertise to support a valuable partnership.",
     author: "Tom Naramore",
     position: "CEO | D3 Sports Tech",
-    image: "/images/testimonial-1.png",
+    // image: "/images/testimonial-1.png" || "/images/user.svg",
   },
   {
     id: 2,
     content:
-      "Working with Azilen has been transformative for our business. Their AI solutions have streamlined our operations and provided valuable insights that drive our decision-making process. The team's technical expertise and commitment to excellence are unmatched.",
+      "Working with OneAim has been transformative for our business. Their AI solutions have streamlined our operations and provided valuable insights that drive our decision-making process. The team's technical expertise and commitment to excellence are unmatched.",
     author: "Sarah Johnson",
     position: "CTO | HealthTech Innovations",
-    image: "/images/testimonial-2.png",
+    // image: "/images/testimonial-2.png" || "/images/user.svg",
   },
   {
     id: 3,
     content:
-      "Azilen's team went above and beyond our expectations. Their deep understanding of our industry challenges and ability to deliver custom solutions has given us a competitive edge. Their collaborative approach made the entire development process smooth and efficient.",
+      "OneAim's team went above and beyond our expectations. Their deep understanding of our industry challenges and ability to deliver custom solutions has given us a competitive edge. Their collaborative approach made the entire development process smooth and efficient.",
     author: "Michael Chen",
     position: "Director of Innovation | FinTech Global",
-    image: "/images/testimonial-3.png",
+    // image: "/images/testimonial-3.png" || "/images/user.svg",
   },
 ]
 
@@ -69,7 +69,7 @@ export default function Testimonials() {
                 <div className="w-full md:w-1/4 flex justify-center">
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden bg-gray-300">
                     <Image
-                      src={testimonials[currentIndex].image || "/placeholder.svg"}
+                      src={testimonials[currentIndex].image || "/user.svg"}
                       alt={testimonials[currentIndex].author}
                       width={200}
                       height={200}
@@ -80,7 +80,7 @@ export default function Testimonials() {
                 <div className="w-full md:w-3/4">
                   <p className="text-lg md:text-xl text-gray-700 mb-8">{testimonials[currentIndex].content}</p>
                   <div className="flex items-center">
-                    <span className="text-[#ff3b30] text-6xl font-serif leading-none mr-4">"</span>
+                    <span className="text-[#ff3b30] text-6xl font-serif leading-none mr-4">&quot;</span>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-[#1e2942]">
                         {testimonials[currentIndex].author}

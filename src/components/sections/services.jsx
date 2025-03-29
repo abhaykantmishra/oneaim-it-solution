@@ -87,7 +87,7 @@ export default function Services() {
 
         {/* Tabs */}
         <div className="flex flex-row justify-center">
-        <div className="flex flex-row max-w-min justify-center gap-2 mb-12 py-2 px-2 bg-[#ffe5e5] rounded-full overflow-auto">
+        <div className="flex flex-row max-w-min justify-center gap-2 mb-12 py-2 px-2 bg-[#ffe5e5] rounded-full overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab}

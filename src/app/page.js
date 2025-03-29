@@ -5,7 +5,7 @@ import DigitalTransformation from "@/components/sections/digital-transformation"
 import Industries from "@/components/sections/industries"
 import CompanyStats from "@/components/sections/company-stats"
 //import Clients from "@/components/sections/clients"
-//import Resources from "@/components/sections/resources"
+import Resources from "@/components/sections/resources"
 import ChatWidget from "@/components/chat-widget"
 
 import Culture from "@/components/sections/culture"
@@ -34,12 +34,14 @@ export default function HomePage() {
         <Industries />
         <CompanyStats /> 
         <Testimonials />
-        <Features />
-        <Security />
-        <Stats />
+        <Resources />
+
+        {/* <Features /> */}
+        {/* <Security /> */}
+        {/* <Stats /> */}
         <Terminal />
         <Workflow />
-        <Culture /> 
+        {/* <Culture />  */}
 
 {/* 
         <Clients />

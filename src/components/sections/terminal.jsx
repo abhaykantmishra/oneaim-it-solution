@@ -1,7 +1,7 @@
 export default function Terminal() {
     return (
       <section className="py-20 px-4 bg-slate-900">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-7xl">
           <div className="max-w-3xl mx-auto">
             <div className="bg-slate-800 rounded-lg overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-3 bg-slate-700">

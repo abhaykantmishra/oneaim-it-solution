@@ -23,7 +23,7 @@ const steps = [
 export default function Workflow() {
   return (
     <section className="py-20 px-4 bg-slate-900">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl font-bold text-white text-center mb-12">Complete IT Tools Perfected to Succeed</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {steps.map((step, index) => (
