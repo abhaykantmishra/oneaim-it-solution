@@ -31,7 +31,7 @@ export default function HomePage() {
       <main>
         <Header />
         <Hero />
-        {/* <Services /> */}
+        <Services />
         <DigitalTransformation />
         <Industries />
         <CompanyStats /> 
