@@ -37,14 +37,15 @@ export default function HomePage() {
         <CompanyStats /> 
         <Testimonials />
         <Resources />
+        <Terminal />
+        <Workflow />
         <CompanyCulture />
         <WhatMakesUs />
 
         {/* <Features /> */}
         {/* <Security /> */}
         {/* <Stats /> */}
-        <Terminal />
-        <Workflow />
+        
         {/* <Culture />  */}
 
 {/* 

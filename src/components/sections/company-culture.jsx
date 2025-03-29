@@ -23,7 +23,7 @@ const employeeQuotes = [
 
 export default function CompanyCulture() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full my-10 bg-white">
       <div className="bg-[#d8e5fa] py-4 md:py-10 rounded-3xl mx-auto px-4 max-w-7xl">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
           <motion.div
