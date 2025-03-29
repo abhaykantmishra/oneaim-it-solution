@@ -84,3 +84,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+.main-button {
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+  outline: 1px solid transparent;
+  transition: background-color, color 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: transparent;
+  color: #ff3b30;
+  outline: 1px solid #ff3b30;
+}
+
+.main-button-blue {
+  background-color: transparent;
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+  outline: 1px solid white;
+  transition: background-color, color 0.3s ease;
+}
+
+.main-button-blue:hover {
+  background-color: transparent;
+  color: #2be8f5;
+  outline: 1px solid #2be8f5;
+}

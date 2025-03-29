@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -14,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Stars } from "lucide-react"
 
 // Define dropdown content for each menu item
 const cloudServicesItems = [
@@ -168,29 +167,56 @@ const ListItem = ({ title, href, description }) => {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [pullRefresh, setPullRefresh] = useState(false)
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY
+
+      // Pull down to show header
+      if (currentScrollY < 0 || currentScrollY < lastScrollY - 20) {
+        setVisible(true)
+        setPullRefresh(currentScrollY < 0)
+      }
+      // Hide header when scrolling down
+      else if (currentScrollY > lastScrollY + 10 && currentScrollY > 100) {
+        setVisible(false)
+        setPullRefresh(false)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener("scroll", controlNavbar)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", controlNavbar)
+    }
+  }, [lastScrollY])
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-sm border-none">
-      <div className="container px-4 ">
-        <div className="flex items-center justify-between h-20 max-w-7xl mx-auto">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
+        } ${pullRefresh ? "shadow-lg" : ""} bg-[#1e2942] text-white`}
+    >
+      <div className="container px-4">
+        <div className="flex items-center justify-between h-20 max-w-6xl mx-auto">
           <Link href="/" className="flex-shrink-0">
-            {/* <img
-              src="/vercel.svg?height=40&width=120"
-              alt="OneAim"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-            /> */}
-            <p className="font-extrabold text-xl">OneAim</p>
+            <p className="font-extrabold text-3xl text-orange-500 font-mono">OneAim</p>
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
-              <NavigationMenuItem >
-                <NavigationMenuTrigger className="bg-transparent">Cloud Services</NavigationMenuTrigger>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
+                  Cloud Services
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
                     {cloudServicesItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
@@ -198,9 +224,11 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Web Development</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
+                  Web Development
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
                     {webDevelopmentItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
@@ -208,9 +236,11 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">AI & ML Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
+                  AI & ML Solutions
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
                     {aimlSolutionsItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
@@ -218,9 +248,11 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Digital Marketing</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
+                  Digital Marketing
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
                     {digitalMarketingItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
@@ -231,31 +263,34 @@ export default function Header() {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:flex">
+            <button
+              className="hidden md:flex md:flex-row py-[8px] px-5 main-button-blue text-nowrap"
+            >
+
               Let&apos;s Talk AI
-            </Button>
-            <Button variant="destructive">Contact Us</Button>
+              <Stars className="ml-1 text-xs" />
+            </button>
+            <button className="main-button py-2 px-5 rounded-full text-base text-nowrap">Contact Us</button>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="lg:hidden p-2">
+                <Button variant="ghost" className="lg:hidden p-2 text-white hover:bg-[#2a3a5f]">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[350px] p-0">
                 <div className="flex flex-col h-full">
-                  <div className="flex items-center justify-between p-4 border-b">
+                  <div className="flex items-center justify-between p-4 border-b bg-[#1e2942]">
                     <Link href="/" className="flex-shrink-0" onClick={() => setIsOpen(false)}>
-                      <img
-                        src="/placeholder.svg?height=40&width=120"
-                        alt="OneAim"
-                        width={120}
-                        height={40}
-                        className="h-8 w-auto"
-                      />
+                      <p className="font-extrabold text-xl text-white">OneAim</p>
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => setIsOpen(false)}
+                      className="text-white hover:bg-[#2a3a5f]"
+                    >
                       <X className="h-5 w-5" />
                     </Button>
                   </div>
@@ -337,9 +372,9 @@ export default function Header() {
                   </div>
 
                   <div className="p-4 border-t space-y-4">
-                    <Button variant="outline" className="w-full">
+                    <button variant="outline" className="main-button-blue">
                       Let&apos;s Talk AI
-                    </Button>
+                    </button>
                     <Button variant="destructive" className="w-full">
                       Contact Us
                     </Button>
@@ -353,3 +388,4 @@ export default function Header() {
     </header>
   )
 }
+

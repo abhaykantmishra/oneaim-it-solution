@@ -38,19 +38,14 @@ export default function DigitalTransformation() {
                 </div>
               ))}
             </div>
-            <div className="w-1/2 mx-auto my-8">
-            <button className="bg-[#ff3b30] text-white px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
-                Achieve Digital Excellence
-            </button>
+            <div className="md:w-1/2 mx-auto my-8">
+              <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
+                  Achieve Digital Excellence
+              </button>
             </div>
           </div>
         </div>
-
-        {/* <div className="text-center mt-12">
-          <Button size="lg" variant="destructive">
-            Achieve Digital Excellence
-          </Button>
-        </div> */}
+        
       </div>
     </section>
   )

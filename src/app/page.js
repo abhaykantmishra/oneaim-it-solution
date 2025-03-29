@@ -3,7 +3,7 @@ import Hero from "@/components/sections/hero"
 import Services from "@/components/sections/services"
 import DigitalTransformation from "@/components/sections/digital-transformation"
 import Industries from "@/components/sections/industries"
-//import CompanyStats from "@/components/sections/company-stats"
+import CompanyStats from "@/components/sections/company-stats"
 //import Clients from "@/components/sections/clients"
 //import Resources from "@/components/sections/resources"
 import ChatWidget from "@/components/chat-widget"
@@ -18,32 +18,34 @@ import Terminal from "@/components/sections/terminal"
 import Workflow from "@/components/sections/workflow"
 
 import Footer from "@/components/layout/footer"
+import Testimonials from "@/components/sections/testimonials"
 
 
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background w-full">
-      <Header />
+      {/* <Header /> */}
       <main>
-        {/* <Header /> */}
+        <Header />
         <Hero />
         <Services />
         <DigitalTransformation />
         <Industries />
+        <CompanyStats /> 
+        <Testimonials />
         <Features />
         <Security />
         <Stats />
         <Terminal />
         <Workflow />
-        <Culture />
+        <Culture /> 
 
-
-        {/* <CompanyStats /> 
+{/* 
         <Clients />
-        <Resources />*/}
+        <Resources /> */}
       </main>
-      <ChatWidget />
+      {/* <ChatWidget /> */}
       <Footer />
     </div>
   )
