@@ -40,7 +40,7 @@ export default function Resources() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          The Edge of Innovation: Discover 'What's Next'
+          The Edge of Innovation: Discover &apos;What&apos;s Next&apos;
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

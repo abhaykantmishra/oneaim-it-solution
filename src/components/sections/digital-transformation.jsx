@@ -23,10 +23,10 @@ export default function DigitalTransformation() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] bg-gray-200 flex flex-col justify-center items-center">
             <img
-              src="/vercel.svg"
+              src="/placeholder.svg"
               alt="Digital Transformation"
               fill
-              className="object-contain"
+              className="object-fill"
             />
           </div>
 
