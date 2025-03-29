@@ -202,8 +202,8 @@ export default function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
         } ${pullRefresh ? "shadow-lg" : ""} bg-[#1e2942] text-white`}
     >
-      <div className="container px-4">
-        <div className="flex items-center justify-between h-20 max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
             <p className="font-extrabold text-3xl text-orange-500 font-mono">OneAim</p>
           </Link>
@@ -270,7 +270,7 @@ export default function Header() {
               Let&apos;s Talk AI
               <Stars className="ml-1 text-xs" />
             </button>
-            <button className="main-button py-2 px-5 rounded-full text-base text-nowrap">Contact Us</button>
+            <button className="main-button py-2 px-5 rounded-full text-lg text-nowrap">Contact Us</button>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>

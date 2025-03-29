@@ -12,7 +12,7 @@ export default function Hero() {
           Powered by <span className="text-cyan-500">Data & AI</span>
         </h2>
         <div className="w-full">
-              <button className="bg-[#ff3b30] text-white px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-transparent hover:text-[#ff3b30] transition-colors">
+              <button className="bg-[#ff3b30] text-lg text-white px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-transparent hover:text-[#ff3b30] transition-colors">
                 Explore More
               </button>
         </div>
