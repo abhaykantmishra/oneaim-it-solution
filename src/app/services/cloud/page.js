@@ -219,7 +219,7 @@ export default function CloudServicesPage() {
               </h1>
               <p className="text-lg md:text-xl text-center text-gray-300 max-w-3xl mx-auto">
                 Secure, scalable, and reliable cloud solutions tailored to your business needs. From hosting to
-                security, we've got you covered.
+                security, we&apos;ve got you covered.
               </p>
             </motion.div>
 
