@@ -12,10 +12,10 @@ const tabContent = {
     description:
       "Our Gen AI solutions leverage cutting-edge artificial intelligence to generate new content, ideas, and solutions. From natural language processing to image generation, our AI services help businesses automate creative processes, enhance customer experiences, and drive innovation across all departments.",
     features: [
-      { id: "01", title: "Natural Language Processing", icon: "/images/icon.png" },
-      { id: "02", title: "Image & Content Generation", icon: "/images/icon.png" },
-      { id: "03", title: "Predictive Analytics", icon: "/images/icon.png" },
-      { id: "04", title: "AI Model Training & Deployment", icon: "/images/icon.png" },
+      { id: "01", title: "Natural Language Processing", icon: "/placeholder.svg" },
+      { id: "02", title: "Image & Content Generation", icon: "/placeholder.svg" },
+      { id: "03", title: "Predictive Analytics", icon: "/placeholder.svg" },
+      { id: "04", title: "AI Model Training & Deployment", icon: "/placeholder.svg" },
     ],
   },
   DevOps: {

@@ -29,7 +29,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background w-full">
       {/* <Header /> */}
       <main>
-        <Header />
+        {/* <Header /> */}
         <Hero />
         <Services />
         <DigitalTransformation />
@@ -53,7 +53,7 @@ export default function HomePage() {
         <Resources /> */}
       </main>
       {/* <ChatWidget /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
