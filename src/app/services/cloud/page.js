@@ -200,7 +200,7 @@ export default function CloudServicesPage() {
     <>
       <main className="">
         {/* Hero */}
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-[#1e2942] text-white relative overflow-hidden">
+        <section className="w-full py-24 lg:py-32 bg-[#1e2942] text-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 relative z-10">
             <motion.div
               className="max-w-5xl mx-auto mb-12"
@@ -325,13 +325,13 @@ export default function CloudServicesPage() {
                   <motion.button
                     key={service.id}
                     onClick={() => setActiveTab(service.id)}
-                    className={`px-6 py-3 rounded-full text-sm md:text-base transition-all duration-300 ${
+                    className={`px-4 md:px-6 py-3 rounded-full text-xs sm:text-sm md:text-base transition-all duration-300 ${
                       activeTab === service.id ? "bg-white text-[#1e2942] shadow-sm" : "text-[#1e2942]"
                     }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <p className="text-nowrap">
+                    <p className="sm:text-nowrap">
                     {service.title}
                     </p>
                   </motion.button>
@@ -351,6 +351,27 @@ export default function CloudServicesPage() {
                   (service) =>
                     service.id === activeTab && (
                       <div key={service.id} className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+
+                        <motion.div
+                          className="relative block sm:hidden rounded-2xl overflow-hidden shadow-lg"
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                          <div className="bg-gradient-to-br from-[#1e2942] to-[#2a3a5f] p-8 flex items-center justify-center h-full min-h-[400px]">
+                            <Image
+                              src={service.image || "/placeholder.svg?height=400&width=400"}
+                              alt={service.title}
+                              width={400}
+                              height={400}
+                              className="max-w-full h-auto rounded-lg"
+                            />
+                          </div>
+
+                          <div className="absolute top-4 right-4 w-16 h-16 bg-[#ff3b30]/10 rounded-full"></div>
+                          <div className="absolute bottom-4 left-4 w-24 h-24 bg-[#3b82f6]/10 rounded-full"></div>
+                        </motion.div>
+
                         <motion.div
                           initial={{ opacity: 0, x: -50 }}
                           animate={{ opacity: 1, x: 0 }}
@@ -387,7 +408,7 @@ export default function CloudServicesPage() {
                         </motion.div>
 
                         <motion.div
-                          className="relative rounded-2xl overflow-hidden shadow-lg"
+                          className="relative rounded-2xl hidden sm:block  overflow-hidden shadow-lg"
                           initial={{ opacity: 0, x: 50 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: 0.2 }}
