@@ -31,6 +31,7 @@ import {
 } from "lucide-react"
 import FAQ from "@/components/faq"
 import { Contact } from "@/components/contact-form"
+import { SpecialButton } from "@/components/ui/special-button"
 
 // Web services data
 const services = [
@@ -48,7 +49,7 @@ const services = [
       "Enterprise-grade web portals and dashboards",
       "Cloud-based web applications with scalable architecture",
     ],
-    image: "/images/web-app-development.png",
+    // image: "/images/web-app-development.png",
   },
   {
     id: "custom-website-development",
@@ -64,7 +65,7 @@ const services = [
       "Custom animations and interactive elements",
       "Accessibility compliance (WCAG standards)",
     ],
-    image: "/images/custom-website-development.png",
+    // image: "/images/custom-website-development.png",
   },
   {
     id: "ui-ux-designing",
@@ -80,7 +81,7 @@ const services = [
       "Usability testing and iterative improvements",
       "Design systems for consistent brand experience",
     ],
-    image: "/images/ui-ux-designing.png",
+    // image: "/images/ui-ux-designing.png",
   },
   {
     id: "ecommerce-development",
@@ -96,7 +97,7 @@ const services = [
       "Product catalog and search functionality",
       "Mobile-optimized shopping experiences",
     ],
-    image: "/images/ecommerce-development.png",
+    // image: "/images/ecommerce-development.png",
   },
   {
     id: "api-development",
@@ -112,7 +113,7 @@ const services = [
       "API documentation and developer resources",
       "API security and authentication protocols",
     ],
-    image: "/images/api-development.png",
+    // image: "/images/api-development.png",
   },
   {
     id: "frontend-development",
@@ -128,7 +129,7 @@ const services = [
       "State management and data flow architecture",
       "Accessibility implementation and testing",
     ],
-    image: "/images/frontend-development.png",
+    // image: "/images/frontend-development.png",
   },
   {
     id: "backend-development",
@@ -144,7 +145,7 @@ const services = [
       "Cloud infrastructure setup and management",
       "Performance monitoring and scaling solutions",
     ],
-    image: "/images/backend-development.png",
+    // image: "/images/backend-development.png",
   },
 ]
 
@@ -259,21 +260,21 @@ const caseStudies = [
     industry: "Retail",
     description:
       "Redesigned and rebuilt an e-commerce platform resulting in a 45% increase in conversion rate and 30% reduction in cart abandonment. The new mobile-first approach led to a 60% increase in mobile sales.",
-    image: "/images/case-study-web-1.png",
+    // image: "/images/case-study-web-1.png",
   },
   {
     title: "SaaS Dashboard Application",
     industry: "Technology",
     description:
       "Developed a complex SaaS dashboard application with real-time data visualization, user management, and subscription handling. The intuitive UI design reduced onboarding time by 50%.",
-    image: "/images/case-study-web-2.png",
+    // image: "/images/case-study-web-2.png",
   },
   {
     title: "Healthcare Patient Portal",
     industry: "Healthcare",
     description:
       "Built a secure patient portal allowing users to schedule appointments, access medical records, and communicate with healthcare providers. The solution improved patient engagement by 65%.",
-    image: "/images/case-study-web-3.png",
+    // image: "/images/case-study-web-3.png",
   },
 ]
 
@@ -388,12 +389,7 @@ export default function WebServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <a
-                href="#contact"
-                className="bg-[#ff3b30] hover:bg-[#e62e24] text-white font-medium px-8 py-4 rounded-full text-lg transition-colors"
-              >
-                Start Your Web Project
-              </a>
+              <SpecialButton isTransparent={true} textClassName={"text-lg"}>Start your Web Project</SpecialButton>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -544,13 +540,16 @@ export default function WebServicesPage() {
                             ))}
                           </ul>
 
-                          <motion.button
+                          {/* <motion.button
                             className="bg-[#ff3b30] text-white px-8 py-3 rounded-full font-medium hover:bg-[#e62e24] transition-colors"
                             whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(255, 59, 48, 0.3)" }}
                             whileTap={{ scale: 0.95 }}
                           >
                             Learn More About {service.title}
-                          </motion.button>
+                          </motion.button> */}
+                          <SpecialButton textClassName={"text-base"}>
+                            Learn More About {service.title}
+                          </SpecialButton>
                         </motion.div>
 
                         <motion.div
@@ -561,7 +560,7 @@ export default function WebServicesPage() {
                         >
                           <div className="bg-gradient-to-br from-[#1e2942] to-[#2a3a5f] p-8 flex items-center justify-center h-full min-h-[400px]">
                             <Image
-                              src={service.image || "/placeholder.svg?height=400&width=400"}
+                              src={service.image || "/placeholder.svg"}
                               alt={service.title}
                               width={400}
                               height={400}
@@ -606,7 +605,7 @@ export default function WebServicesPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-full">
+                  <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-400 h-full">
                     <div className="absolute -top-6 left-8 bg-[#1e2942] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">
                       {index + 1}
                     </div>
@@ -749,7 +748,7 @@ export default function WebServicesPage() {
                     <div className="md:col-span-1">
                       <div className="rounded-lg overflow-hidden">
                         <Image
-                          src={study.image || "/placeholder.svg?height=200&width=300"}
+                          src={study.image || "/placeholder.svg"}
                           alt={study.title}
                           width={300}
                           height={200}
