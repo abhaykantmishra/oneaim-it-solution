@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export function SpecialButton({ children, isTransparent = false, handleClick, textClassName }) {
-    const [activeClass, setActiveClass] = useState(isTransparent === true ? "hover:bg-transparent hover:text-[#ff3b30]" : "hover:bg-white hover:text-[#ff3b30]")
+    const [activeClass, setActiveClass] = useState(isTransparent === true ? "hover:bg-transparent" : "hover:bg-white hover:text-[#ff3b30]")
     
     
     return (
