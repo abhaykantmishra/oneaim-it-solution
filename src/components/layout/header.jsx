@@ -19,22 +19,22 @@ import { Menu, X, Stars } from "lucide-react"
 const cloudServicesItems = [
   {
     title: "Cloud Hosting",
-    href: "#",
+    href: "/cloud-services",
     description: "End-to-end product development services for startups and enterprises",
   },
   {
     title: "Server Management",
-    href: "#",
+    href: "/cloud-services",
     description: "User-centered design services to create intuitive digital experiences",
   },
   {
     title: "Data Backup",
-    href: "#",
+    href: "/cloud-services",
     description: "Native and cross-platform mobile app development",
   },
   {
     title: "Cloud Security",
-    href: "#",
+    href: "/cloud-services",
     description: "Modern web applications built with the latest technologies",
   },
 ]
@@ -42,42 +42,42 @@ const cloudServicesItems = [
 const webDevelopmentItems = [
   {
     title: "Web App Development",
-    href: "#",
+    href: "/development-services",
     description: "Seamless migration to cloud platforms like AWS, Azure, and GCP",
   },
   {
     title: "Custom website development",
-    href: "#",
+    href: "/development-services",
     description: "Streamline your development and operations with CI/CD pipelines",
   },
   {
     title: "Ui & Ux Designing",
-    href: "#",
+    href: "/development-services",
     description: "Manage infrastructure with code for better scalability and reliability",
   },
   {
     title: "E- Commerce Development",
-    href: "#",
+    href: "/development-services",
     description: "Container orchestration and management solutions",
   },
   {
     title: "Api Development & Integration",
-    href: "#",
+    href: "/development-services",
     description: "Container orchestration and management solutions",
   },
   {
     title: "Front-End Development",
-    href: "#",
+    href: "/development-services",
     description: "Container orchestration and management solutions",
   },
   {
     title: "Back-End Development",
-    href: "#",
+    href: "/development-services",
     description: "Container orchestration and management solutions",
   },
   {
     title: "DevOps & Cloud Services",
-    href: "#",
+    href: "/development-services",
     description: "Container orchestration and management solutions",
   },
 ]
@@ -85,42 +85,42 @@ const webDevelopmentItems = [
 const aimlSolutionsItems = [
   {
     title: "Custom AI Development",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Transform your business with modern digital solutions",
   },
   {
     title: "AI Game Development",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Design scalable and resilient enterprise systems",
   },
   {
     title: "AI Chatbot Development",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Update legacy systems to modern technologies",
   },
   {
     title: "Custom Machine Learning Development Services",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Implement agile methodologies for better project outcomes",
   },
   {
     title: "Ai Software Development",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Implement agile methodologies for better project outcomes",
   },
   {
     title: "Predictive Analytics Solutions",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Implement agile methodologies for better project outcomes",
   },
   {
     title: "Deep Learning Development  services",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Implement agile methodologies for better project outcomes",
   },
   {
     title: "Ai consultancy services",
-    href: "#",
+    href: "/ai-ml-services",
     description: "Implement agile methodologies for better project outcomes",
   },
 ]
@@ -128,22 +128,22 @@ const aimlSolutionsItems = [
 const digitalMarketingItems = [
   {
     title: "Meta ads",
-    href: "#",
+    href: "/digital-marketing",
     description: "Financial technology solutions for banks and financial institutions",
   },
   {
     title: "Google ads",
-    href: "#",
+    href: "/digital-marketing",
     description: "Healthcare technology solutions for providers and patients",
   },
   {
     title: "Instagram ads",
-    href: "#",
+    href: "/digital-marketing",
     description: "Sustainable technology solutions for a greener future",
   },
   {
     title: "SEO",
-    href: "#",
+    href: "/digital-marketing",
     description: "Human resources technology solutions for better workforce management",
   },
 ]

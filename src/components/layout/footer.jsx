@@ -2,9 +2,9 @@ import Link from "next/link"
 import { Github, Twitter, Linkedin } from "lucide-react"
 
 const footerLinks = {
-  Product: ["Features", "Security", "Enterprise", "Pricing"],
-  Resources: ["Documentation", "Guides", "API Reference", "Support"],
-  Company: ["About", "Blog", "Careers", "Press"],
+  Services: ["Cloud Services", "Development Services", "Ai-Ml Services", "Digital Marketing"],
+  Industries: ["Automobile", "E-Commerce", "Telecommunication", "Education", "Healthcare", "Government & Defense", "Finance & Banking" ],
+  Company: ["About", "FAQ", "Careers", "Blog"],
   Legal: ["Privacy", "Terms", "Security", "Cookies"],
 }
 
@@ -35,7 +35,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link}>
-                    <Link href="#" className="text-slate-400 hover:text-white">
+                    <Link href={`/${link.toLowerCase().replace(" ", "-").replace(" ","-")}`} className="text-slate-400 hover:text-white">
                       {link}
                     </Link>
                   </li>

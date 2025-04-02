@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className}`}>
         <Header />
-        <main className=''>
+        <main className='py-20'>
         {children}
         </main>
         <Footer />
