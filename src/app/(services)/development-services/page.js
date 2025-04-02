@@ -642,7 +642,7 @@ export default function WebServicesPage() {
               {technologies.map((tech, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gradient-to-br from-white to-[#f8f9fc] p-6 rounded-2xl shadow-sm border border-gray-100"
+                  className="bg-gradient-to-br from-white to-[#f8f9fc] p-6 rounded-2xl shadow-sm border border-[#ff3b30]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -685,7 +685,7 @@ export default function WebServicesPage() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className={`p-8 rounded-2xl shadow-sm border border-gray-100 ${
+                  className={`p-8 rounded-2xl shadow-sm border border-gray-100 outline outline-1 outline-blue-400 ${
                     index % 3 === 0
                       ? "bg-gradient-to-br from-white to-[#f0f7ff]"
                       : index % 3 === 1
@@ -812,7 +812,7 @@ export default function WebServicesPage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="hidden md:block"
                 >
-                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-gray-200">
+                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-[#ff3b30]">
                     <div className="bg-white rounded-2xl overflow-hidden">
                       <Smartphone className="w-full h-auto text-gray-300" />
                       <div className="p-4">
@@ -829,7 +829,7 @@ export default function WebServicesPage() {
                   transition={{ duration: 0.6 }}
                   className="md:transform md:scale-125 z-10"
                 >
-                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-gray-200">
+                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-blue-400">
                     <div className="bg-white rounded-2xl overflow-hidden">
                       <Laptop className="w-full h-auto text-gray-300" />
                       <div className="p-4">
@@ -847,7 +847,7 @@ export default function WebServicesPage() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="hidden md:block"
                 >
-                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-gray-200">
+                  <div className="bg-[#f8f9fc] p-4 rounded-3xl shadow-lg border border-[#ff3b30]">
                     <div className="bg-white rounded-2xl overflow-hidden">
                       <MonitorSmartphone className="w-full h-auto text-gray-300" />
                       <div className="p-4">
