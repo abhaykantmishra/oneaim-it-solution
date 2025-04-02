@@ -151,7 +151,7 @@ const caseStudies = [
   },
 ]
 
-const cloudFAQs = [
+export const cloudFAQs = [
   {
     question: "What cloud platforms do you support?",
     answer:
