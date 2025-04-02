@@ -205,7 +205,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0">
-            <p className="font-extrabold text-3xl text-orange-500 font-mono">OneAim</p>
+            <p className="font-extrabold text-3xl text-[#ff3b30] font-mono">OneAim</p>
           </Link>
 
           {/* Desktop Navigation */}
