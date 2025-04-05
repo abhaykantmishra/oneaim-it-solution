@@ -590,8 +590,9 @@ export default function DigitalMarketingPage() {
           {/* Services  */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto my-20">
             {
-              marketingServices.map((service) => (
+              marketingServices.map((service,index) => (
                 <motion.div
+                  key={index}
                   className="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -757,7 +758,7 @@ export default function DigitalMarketingPage() {
             >
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Why Digital Marketing Matters</h2>
               <p className="text-lg text-gray-600">
-                In today&apos;s digital-first world, a strategic online presence is essential for business growth. Here's how
+                In today&apos;s digital-first world, a strategic online presence is essential for business growth. Here&apos;s how
                 our digital marketing services can benefit your business.
               </p>
             </motion.div>
@@ -1221,7 +1222,7 @@ export default function DigitalMarketingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-16 md:py-24 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+        {/* <section className="w-full py-16 md:py-24 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="max-w-4xl mx-auto text-center"
@@ -1254,7 +1255,7 @@ export default function DigitalMarketingPage() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Form Section */}
         <section id="contact" className="w-full py-16 md:py-24 bg-white">
