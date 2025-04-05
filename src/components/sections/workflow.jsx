@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const steps = [
   {
@@ -38,11 +39,11 @@ export default function Workflow() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center my-10">
+        <Link href={'/contact'} className="flex justify-center my-10">
           <button className="bg-[#ff3b30] text-white text-nowrap text-xl px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-transparent transition-colors">
               What is Your Engineering Problem? 
           </button>
-        </div>
+        </Link>
       </div>
     </section>
   )

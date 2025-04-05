@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const challenges = [
   "Legacy Systems & Infrastructure",
@@ -38,11 +39,11 @@ export default function DigitalTransformation() {
                 </div>
               ))}
             </div>
-            <div className="md:w-1/2 mx-auto my-8">
+            <Link href={'/contact'} className="md:w-1/2 mx-auto my-8">
               <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
                   Achieve Digital Excellence
               </button>
-            </div>
+            </Link>
           </div>
         </div>
         

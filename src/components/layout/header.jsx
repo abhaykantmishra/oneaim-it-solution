@@ -263,14 +263,17 @@ export default function Header() {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <button
-              className="hidden md:flex md:flex-row py-[8px] px-5 main-button-blue text-nowrap"
-            >
-
-              Let&apos;s Talk AI
-              <Stars className="ml-1 text-xs" />
-            </button>
-            <button className="main-button py-2 px-5 rounded-full text-lg text-nowrap">Contact Us</button>
+            <Link href={'/contact'} className="p-0 m-0">
+              <button
+                className="hidden md:flex md:flex-row py-[8px] px-5 main-button-blue text-nowrap"
+              >
+                Let&apos;s Talk AI
+                <Stars className="ml-1 text-xs" />
+              </button>
+            </Link>
+            <Link href={'/contact'} className="p-0 m-0">
+              <button className="main-button py-2 px-5 rounded-full text-lg text-nowrap">Contact Us</button>
+            </Link>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -285,14 +288,6 @@ export default function Header() {
                     <Link href="/" className="flex-shrink-0" onClick={() => setIsOpen(false)}>
                       <p className="font-extrabold text-xl text-white">OneAim</p>
                     </Link>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => setIsOpen(false)}
-                      className="text-white hover:bg-[#2a3a5f]"
-                    >
-                      <X className="h-5 w-5" />
-                    </Button>
                   </div>
 
                   <div className="flex-1 overflow-auto py-4">
@@ -372,12 +367,17 @@ export default function Header() {
                   </div>
 
                   <div className="p-4 border-t space-y-4">
-                    <button variant="outline" className="main-button-blue">
-                      Let&apos;s Talk AI
-                    </button>
-                    <Button variant="destructive" className="w-full">
-                      Contact Us
-                    </Button>
+                    <Link href={'/contact'}>
+                      <Button variant="outline" className="w-full rounded-full text-[]  py-2 text-nowrap flex flex-row justify-center mb-4">
+                        Let&apos;s Talk AI
+                        <Stars className="mx-2" />
+                      </Button>
+                    </Link>
+                    <Link href={'/contact'}>
+                      <Button variant="destructive" className="w-full rounded-full">
+                        Contact Us
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

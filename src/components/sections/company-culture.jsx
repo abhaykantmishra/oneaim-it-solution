@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const employeeQuotes = [
   {
@@ -69,11 +70,11 @@ export default function CompanyCulture() {
               diversity. We support our team with wellness initiatives and ensure every voice is heard. By prioritizing
               people and their well-being, we create a vibrant environment where everyone can grow and succeed together.
             </p>
-            <div className="flex md:block justify-center">
+            <Link href="/about" className="flex md:block justify-center">
             <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
                 Explore Vibrant Life @ OneAim
             </button>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>

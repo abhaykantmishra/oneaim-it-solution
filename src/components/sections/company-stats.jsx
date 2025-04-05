@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import FlowingLinesSVG from "../ui/flowing-lines"
+import Link from "next/link"
 
 export default function CompanyStats() {
   return (
@@ -83,9 +84,11 @@ export default function CompanyStats() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
+          <Link href="/contact">
           <button className="bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors">
               Get Launch Ready | Talk to Experts
           </button>
+          </Link>
         </motion.div>
       </div>
 
