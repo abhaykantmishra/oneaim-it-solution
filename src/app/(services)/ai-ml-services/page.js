@@ -157,7 +157,7 @@ export default function AiMlServices() {
               <img src="/assest/heroImage.jpg" alt="AI Concept" className="w-full rounded-lg shadow-lg" />
             </div>
             <p className="text-sm text-gray-500 italic text-center mt-4 col-span-1 md:col-span-2">
-              "But with AI shaping the horizon, the sky was never the same shade of blue again."
+              &qout;But with AI shaping the horizon, the sky was never the same shade of blue again.&qout;
             </p>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function AiMlServices() {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-extrabold text-gray-900">Why AI & Data Matter?</h2>
           <p className="mt-4 max-w-2xl text-lg text-gray-500 mx-auto">
-            The smartest way to work with AI is to ask where it fits and how to gain the most from it. That’s where we step in.
+            The smartest way to work with AI is to ask where it fits and how to gain the most from it. That&apos;s where we step in.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
