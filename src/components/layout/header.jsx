@@ -148,8 +148,46 @@ const digitalMarketingItems = [
   },
 ]
 
+const IndustriesItems = [
+  {
+    title: "Automobile",
+    href: "/automobile",
+    description: "Automobile technology solutions",
+  },
+  {
+    title: "Telecommunications",
+    href: "/telecommunication",
+    description: "telecommunication technology solutions for providers and consumers",
+  },
+  {
+    title: "Healthcare",
+    href: "/healthcare",
+    description: "Healthcare technology solutions for providers and patients",
+  },
+  {
+    title: "E-Commerce",
+    href: "/e-commerce",
+    description: "Human resources technology solutions for better workforce management",
+  },
+  {
+    title: "Finance & Banking",
+    href: "/finance-&-banking",
+    description: "Financial technology solutions for banks and financial institutions",
+  },
+  {
+    title: "Education",
+    href: "/education",
+    description: "Education technology solutions for better institutions and workforce management",
+  },
+  {
+    title: "Govt & Defense",
+    href: "/govt-&-defense",
+    description: "Human resources technology solutions for better workforce management",
+  },
+]
+
 // Component for dropdown menu items
-const ListItem = ({ title, href, description }) => {
+const ListItem = ({ title, href, description, image }) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -157,8 +195,15 @@ const ListItem = ({ title, href, description }) => {
           href={href}
           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-slate-500">{description}</p>
+          <div className="flex flex-row">
+            <div className="bg-blue-400 text-xs w-14 h-14">
+              <img src={image || "/placeholder.svg"} alt={title} className="w-14 h-14 overflow-hidden" />
+            </div>
+            <div>
+              <div className="text-sm font-medium leading-none">{title}</div>
+              <p className="line-clamp-2 text-sm leading-snug text-slate-500">{description}</p>
+            </div>
+          </div>
         </Link>
       </NavigationMenuLink>
     </li>
@@ -204,7 +249,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 mx-1">
             <p className="font-extrabold text-3xl text-[#ff3b30] font-mono">OneAim</p>
           </Link>
 
@@ -216,53 +261,70 @@ export default function Header() {
                   Cloud Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[700px] md:grid-cols-2 lg:w-[780px] bg-white">
                     {cloudServicesItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
                   Web Development
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[700px] md:grid-cols-2 lg:w-[780px] bg-white">
                     {webDevelopmentItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
                   AI & ML Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[700px] md:grid-cols-2 lg:w-[780px] bg-white">
                     {aimlSolutionsItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
                   Digital Marketing
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[700px] md:grid-cols-2 lg:w-[780px] bg-white">
                     {digitalMarketingItems.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-[#2a3a5f] data-[state=open]:bg-[#2a3a5f]">
+                  Industries
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[700px] md:grid-cols-2 lg:w-[780px] bg-white">
+                    {IndustriesItems.map((item) => (
+                      <ListItem key={item.title} title={item.title} href={item.href} description={item.description} />
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mx-2">
             <Link href={'/contact'} className="p-0 m-0">
               <button
                 className="hidden md:flex md:flex-row py-[8px] px-5 main-button-blue text-nowrap"
