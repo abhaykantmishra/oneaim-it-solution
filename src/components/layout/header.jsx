@@ -195,13 +195,13 @@ const ListItem = ({ title, href, description, image }) => {
           href={href}
           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
         >
-          <div className="flex flex-row">
-            <div className="bg-blue-400 text-xs w-14 h-14">
-              <img src={image || "/placeholder.svg"} alt={title} className="w-14 h-14 overflow-hidden" />
+          <div className="w-full flex flex-row">
+            <div className="text-xs w-[30%] flex justify-center">
+              <img src={image || "/placeholder.svg"} alt={title} />
             </div>
-            <div>
-              <div className="text-sm font-medium leading-none">{title}</div>
-              <p className="line-clamp-2 text-sm leading-snug text-slate-500">{description}</p>
+            <div className="flex flex-col mx-1">
+              <h1 className="text-sm font-medium">{title}</h1>
+              <p className="text-sm text-slate-500">{description}</p>
             </div>
           </div>
         </Link>
