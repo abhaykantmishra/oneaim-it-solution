@@ -151,42 +151,21 @@ export default function ContactPage() {
 
   return (
     <>
-      <main className="pt-20">
+      {/* <Header /> */}
+      <main className="pt-20 ">
         {/* Hero Section */}
-        <section className="w-full py-16 md:py-24 bg-[#1e2942] text-white relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              className="max-w-4xl mx-auto text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Get in Touch With Our Team</h1>
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you have a question about our services, need a custom quote, or want to discuss your project,
-                our team is ready to help you build something amazing.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-full h-full z-0 opacity-20">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.7" />
-                  <stop offset="100%" stopColor="#ff3b30" stopOpacity="0.7" />
-                </linearGradient>
-              </defs>
-              <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grad1)" />
-              <path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="#3b82f6" opacity="0.3" />
-              <path d="M0,70 Q25,50 50,70 T100,70 L100,100 L0,100 Z" fill="#ff3b30" opacity="0.3" />
-            </svg>
-          </div>
-        </section>
+        <motion.div
+          className="p-4 md:p-6 w-full"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mx-auto text-center">Get in Touch With Our Team</h1>
+        </motion.div>
+        
 
         {/* Main Contact Section */}
-        <section className="w-full py-16 md:py-24 bg-white">
+        <section className="w-full py-8 md:py-10 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
               {/* Contact Form */}
@@ -197,13 +176,9 @@ export default function ContactPage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold text-[#1e2942] mb-8">
-                    Let's Connect for Successful Product Journey
-                  </h2>
-
                   <div className="mb-10">
                     <h3 className="text-xl font-semibold text-[#1e2942] mb-4">
-                      Share your business challenge. We might have already cracked it what you're struggling with!
+                      Share your business challenge. We might have already cracked it what you&apos;re struggling with!
                     </h3>
                     <p className="text-gray-600 mb-6">
                       For any career related inquiries, please email us at careers@oneaim.com.
@@ -392,7 +367,7 @@ export default function ContactPage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold text-[#1e2942] mb-8">What's next?</h2>
+                  <h2 className="text-2xl font-bold text-[#1e2942] mb-8">What&apos;s next?</h2>
 
                   <div className="space-y-8">
                     {processSteps.map((step, index) => (
@@ -518,56 +493,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Office Locations Section */}
-        {/* <section className="w-full py-16 md:py-24 bg-[#f8f9fc]">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="max-w-3xl mx-auto text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1e2942] mb-6">Our Offices</h2>
-              <p className="text-lg text-gray-600">
-                With offices around the globe, we're ready to serve you wherever you are.
-              </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 border border-gray-200 rounded-3xl overflow-hidden">
-                {officeLocations.map((office, index) => (
-                  <motion.div
-                    key={index}
-                    className="p-6 border-b border-r border-gray-200 bg-white"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.05 }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-2xl">{office.flag}</span>
-                      <h3 className="text-xl font-semibold text-[#1e2942]">{office.country}</h3>
-                    </div>
-
-                    <div className="mb-4">
-                      {office.address.map((line, i) => (
-                        <p key={i} className="text-gray-600">
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-
-                    {office.phone && (
-                      <a href={`tel:${office.phone}`} className="text-[#ff3b30] font-medium hover:underline">
-                        {office.phone}
-                      </a>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         {/* FAQ Section */}
         <section className="w-full py-16 md:py-24 bg-[#f8f9fc]">
           <div className="container mx-auto px-4">
@@ -598,7 +523,7 @@ export default function ContactPage() {
                   <div className="px-6 pb-6">
                     <p className="text-gray-600">
                       We can typically begin work within 1-2 weeks of finalizing project details and agreements. For
-                      urgent projects, we may be able to expedite this timeline. During our initial consultation, we'll
+                      urgent projects, we may be able to expedite this timeline. During our initial consultation, we&apos;ll
                       discuss your timeline requirements and provide a specific start date.
                     </p>
                   </div>
@@ -681,7 +606,7 @@ export default function ContactPage() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
               <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                Let's collaborate to build innovative solutions that drive your business forward. Our team of experts is
+                Let&apos;s collaborate to build innovative solutions that drive your business forward. Our team of experts is
                 ready to turn your vision into reality.
               </p>
               <motion.a
@@ -695,8 +620,7 @@ export default function ContactPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* <ChatButton /> */}
+        
       </main>
     </>
   )
