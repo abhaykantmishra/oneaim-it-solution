@@ -17,7 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import FAQ from "@/components/faq"
-import { Contact } from "@/components/contact-form"
+import ContactForm from "@/components/contact-form"
 import { SpecialButton } from "@/components/ui/special-button"
 
 
@@ -488,6 +488,7 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
+        {/* case study */}
         <section className="w-full py-16 md:py-24 bg-[#1e2942] text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -554,13 +555,47 @@ export default function CloudServicesPage() {
         </section>
 
         {/* FAQs */}
-        <FAQ title={"Frequently Asked Questions About Cloud Services"}
-          description={"Find answers to common questions about our cloud services offerings and how we can help your business leverage the power of the cloud."}
-          faqs={cloudFAQs}
-        />
+        <section className="w-full py-16 md:py-24 bg-[#f8f9fc]">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="max-w-3xl mx-auto text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">
+                Frequently Asked Questions About Cloud Solutions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Find answers to common questions about our cloud services and how we can help your business scale
+                online.
+              </p>
+            </motion.div>
+
+            <FAQ faqs={cloudFAQs} />
+          </div>
+        </section>
 
         {/* Contact */}
-        <Contact title={"Get in Touch"} description={"description"} />
+        <section id="contact" className="w-full py-12 md:py-20 font-serif">
+          <div className="max-w-3xl mx-auto px-4 py-5">
+            <motion.div
+              className="max-w-3xl mx-auto text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl md:text-4xl font-medium  text-[#1e2942] mb-4">
+                Let's Discuss Your E-commerce Project
+              </h2>
+              <p className="text-lg text-gray-600">
+                Fill out the form below to schedule a free consultation with one of our e-commerce experts.
+              </p>
+            </motion.div>
+
+            <ContactForm serviceOptions={services.map((solution) => solution.title)} />
+          </div>
+        </section>
 
       </main>
     </>

@@ -39,7 +39,7 @@ export default function ContactForm({ serviceOptions }) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto bg-inherit">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
           <h3 className="text-2xl font-bold text-[#1e2942] mb-6">Contact Information</h3>
