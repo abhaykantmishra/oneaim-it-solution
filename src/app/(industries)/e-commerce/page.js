@@ -51,7 +51,7 @@ const ecommerceSolutions = [
       "Unique customer account portals",
     ],
     technologies: ["React", "Node.js", "PHP", "Python", "Java", "MongoDB", "PostgreSQL"],
-    image: "/images/custom-ecommerce.png",
+    // image: "/images/custom-ecommerce.png",
     color: "from-blue-500 to-indigo-600",
     lightColor: "bg-blue-50",
     iconColor: "text-blue-500",
@@ -71,7 +71,7 @@ const ecommerceSolutions = [
       "Marketing automation platform connections",
     ],
     technologies: ["API Development", "Middleware Solutions", "ETL Processes", "Webhooks", "iPaaS"],
-    image: "/images/platform-integration.png",
+    // image: "/images/platform-integration.png",
     color: "from-green-500 to-emerald-600",
     lightColor: "bg-green-50",
     iconColor: "text-green-500",
@@ -91,7 +91,7 @@ const ecommerceSolutions = [
       "Server-side rendering implementation",
     ],
     technologies: ["Google PageSpeed", "Lighthouse", "WebPageTest", "Redis", "Cloudflare", "Varnish"],
-    image: "/images/performance-optimization.png",
+    // image: "/images/performance-optimization.png",
     color: "from-red-500 to-orange-500",
     lightColor: "bg-red-50",
     iconColor: "text-red-500",
@@ -111,7 +111,7 @@ const ecommerceSolutions = [
       "DDoS protection and mitigation",
     ],
     technologies: ["SSL/TLS", "Tokenization", "WAF", "2FA", "OWASP", "Penetration Testing"],
-    image: "/images/security-solutions.png",
+    // image: "/images/security-solutions.png",
     color: "from-purple-500 to-pink-500",
     lightColor: "bg-purple-50",
     iconColor: "text-purple-500",
@@ -131,7 +131,7 @@ const ecommerceSolutions = [
       "Mobile-specific UX optimization",
     ],
     technologies: ["React Native", "Flutter", "PWA", "iOS", "Android", "AMP"],
-    image: "/images/mobile-commerce.png",
+    // image: "/images/mobile-commerce.png",
     color: "from-yellow-500 to-amber-600",
     lightColor: "bg-yellow-50",
     iconColor: "text-yellow-500",
@@ -151,7 +151,7 @@ const ecommerceSolutions = [
       "Marketing channel attribution",
     ],
     technologies: ["Google Analytics", "Adobe Analytics", "Mixpanel", "Hotjar", "Tableau", "Power BI"],
-    image: "/images/analytics-insights.png",
+    // image: "/images/analytics-insights.png",
     color: "from-cyan-500 to-blue-500",
     lightColor: "bg-cyan-50",
     iconColor: "text-cyan-500",
@@ -162,32 +162,32 @@ const ecommerceSolutions = [
 const supportedPlatforms = [
   {
     name: "Shopify",
-    icon: "/images/shopify-icon.png",
+    // icon: "/images/shopify-icon.png",
     description: "Build and customize Shopify stores with advanced features and integrations.",
   },
   {
     name: "Magento",
-    icon: "/images/magento-icon.png",
+    // icon: "/images/magento-icon.png",
     description: "Leverage the power of Magento for enterprise-grade e-commerce solutions.",
   },
   {
     name: "WooCommerce",
-    icon: "/images/woocommerce-icon.png",
+    // icon: "/images/woocommerce-icon.png",
     description: "Create flexible WordPress-based online stores with WooCommerce.",
   },
   {
     name: "BigCommerce",
-    icon: "/images/bigcommerce-icon.png",
+    // icon: "/images/bigcommerce-icon.png",
     description: "Develop scalable online stores with BigCommerce's robust features.",
   },
   {
     name: "Salesforce Commerce Cloud",
-    icon: "/images/salesforce-icon.png",
+    // icon: "/images/salesforce-icon.png",
     description: "Implement enterprise e-commerce solutions with Salesforce Commerce Cloud.",
   },
   {
     name: "Custom Solutions",
-    icon: "/images/custom-icon.png",
+    // icon: "/images/custom-icon.png",
     description: "Build bespoke e-commerce platforms tailored to unique business requirements.",
   },
 ]
@@ -380,7 +380,7 @@ export default function EcommerceSolutionsPage() {
         { label: "Average Order Value Growth", value: "45%" },
         { label: "Page Load Speed Improvement", value: "65%" },
       ],
-      image: "/images/case-study-fashion.png",
+      // image: "/images/case-study-fashion.png",
     },
     {
       title: "B2B Wholesale Platform Integration",
@@ -392,7 +392,7 @@ export default function EcommerceSolutionsPage() {
         { label: "Order Accuracy", value: "99.8%" },
         { label: "Distributor Adoption Rate", value: "94%" },
       ],
-      image: "/images/case-study-b2b.png",
+      // image: "/images/case-study-b2b.png",
     },
     {
       title: "Multi-vendor Marketplace Launch",
@@ -404,7 +404,7 @@ export default function EcommerceSolutionsPage() {
         { label: "Revenue Increase", value: "120%" },
         { label: "Product Catalog Expansion", value: "10x" },
       ],
-      image: "/images/case-study-marketplace.png",
+      // image: "/images/case-study-marketplace.png",
     },
   ]
 
@@ -698,7 +698,7 @@ export default function EcommerceSolutionsPage() {
                       transition={{ duration: 0.5, delay: 0.3 }}
                     >
                       <Image
-                        src="/images/ecommerce-overview.png"
+                        src={"/placeholder.svg" || "/images/ecommerce-overview.png" }
                         alt="E-commerce IT Solutions"
                         width={600}
                         height={400}
@@ -849,7 +849,7 @@ export default function EcommerceSolutionsPage() {
                         className={`bg-gradient-to-br ${solution.color} p-8 flex items-center justify-center h-full min-h-[400px]`}
                       >
                         <Image
-                          src={solution.image || "/placeholder.svg?height=400&width=400"}
+                          src={solution.image || "/placeholder.svg"}
                           alt={solution.title}
                           width={400}
                           height={400}
@@ -896,7 +896,7 @@ export default function EcommerceSolutionsPage() {
                 >
                   <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
-                      src={platform.icon || "/placeholder.svg?height=64&width=64"}
+                      src={platform.icon || "/placeholder.svg"}
                       alt={platform.name}
                       width={64}
                       height={64}

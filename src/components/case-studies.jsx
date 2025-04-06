@@ -23,7 +23,7 @@ export default function CaseStudies({ caseStudies }) {
             <div className="md:col-span-4 flex items-center justify-center">
               <div className="rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src={study.image || "/placeholder.svg?height=300&width=300"}
+                  src={study.image || "/placeholder.svg"}
                   alt={study.title}
                   width={300}
                   height={300}
