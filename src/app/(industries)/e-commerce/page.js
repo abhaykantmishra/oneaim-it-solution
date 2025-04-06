@@ -715,7 +715,7 @@ export default function EcommerceSolutionsPage() {
         </section>
 
         {/* Solutions Section with Tabs */}
-        <section id="solutions" ref={solutionsRef} className="w-full py-16 md:py-24 bg-[#f8f9fc]">
+        <section id="solutions" ref={solutionsRef} className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="max-w-3xl mx-auto text-center mb-16"
@@ -723,25 +723,26 @@ export default function EcommerceSolutionsPage() {
               animate={isSolutionsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">Our E-commerce IT Solutions</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our E-commerce IT Solutions</h2>
               <p className="text-lg text-gray-600">
                 We offer a comprehensive suite of e-commerce IT solutions designed to address every aspect of your
                 online business, from development and integration to optimization and security.
               </p>
             </motion.div>
 
-            <Tabs defaultValue={ecommerceSolutions[0].id} className="max-w-5xl mx-auto">
+            <Tabs defaultValue={ecommerceSolutions[0].id} className="max-w-6xl mx-auto">
               <motion.div
+              className="bg-[#fff5f5] rounded-full p-2 flex flex-row justify-center "
                 initial={{ opacity: 0, y: 20 }}
                 animate={isSolutionsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <TabsList className="w-full flex flex-wrap justify-center gap-2 mb-12 bg-transparent">
+                <TabsList className="w-full h-full flex md:flex-row flex-wrap justify-center gap-2 bg-[#fff5f5] rounded-full">
                   {ecommerceSolutions.map((solution, index) => (
                     <TabsTrigger
                       key={solution.id}
                       value={solution.id}
-                      className="px-6 py-3 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:text-white data-[state=active]:shadow-md"
+                      className="px-6 py-3 rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:text-black data-[state=active]:shadow-md"
                       style={{
                         backgroundImage: `var(--state-active, none)`,
                         "--state-active": `linear-gradient(to right, ${
@@ -771,7 +772,7 @@ export default function EcommerceSolutionsPage() {
               </motion.div>
 
               {ecommerceSolutions.map((solution) => (
-                <TabsContent key={solution.id} value={solution.id} className="mt-0">
+                <TabsContent key={solution.id} value={solution.id} className="mt-2 md:mt-4 mx-4">
                   <motion.div
                     className="grid md:grid-cols-2 gap-8 items-center"
                     initial={{ opacity: 0, x: 0 }}
