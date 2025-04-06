@@ -583,7 +583,7 @@ export default function EcommerceSolutionsPage() {
                 Comprehensive E-commerce IT Solutions
               </h2>
               <p className="text-lg text-gray-600">
-                In today's competitive digital marketplace, your e-commerce platform needs to be more than just a
+                In today&apos;s competitive digital marketplace, your e-commerce platform needs to be more than just a
                 website. It needs to be a powerful sales engine that delivers exceptional customer experiences,
                 integrates seamlessly with your business systems, and scales with your growth.
               </p>
@@ -1441,7 +1441,7 @@ export default function EcommerceSolutionsPage() {
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your E-commerce Business?</h2>
               <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                Let's create an e-commerce solution that drives growth, enhances customer experiences, and gives you a
+                Let&apos;s create an e-commerce solution that drives growth, enhances customer experiences, and gives you a
                 competitive edge in the digital marketplace.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -1476,7 +1476,7 @@ export default function EcommerceSolutionsPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">
-                Let's Discuss Your E-commerce Project
+                Let&apos;s Discuss Your E-commerce Project
               </h2>
               <p className="text-lg text-gray-600">
                 Fill out the form below to schedule a free consultation with one of our e-commerce experts.

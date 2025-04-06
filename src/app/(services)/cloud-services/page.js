@@ -586,10 +586,10 @@ export default function CloudServicesPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl md:text-4xl font-medium  text-[#1e2942] mb-4">
-                Let's Discuss Your E-commerce Project
+                Let&apos;s Discuss Your Project
               </h2>
               <p className="text-lg text-gray-600">
-                Fill out the form below to schedule a free consultation with one of our e-commerce experts.
+                Fill out the form below to schedule a free consultation with one of our cloud experts.
               </p>
             </motion.div>
 
