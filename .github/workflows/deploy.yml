@@ -89,7 +89,7 @@ jobs:
             cp -P "$CURRENT_LINK" "$PREVIOUS_LINK"
           fi
           
-          # Switch to new version
+          # Switch to new-version
           rm -f "$CURRENT_LINK"
           ln -s "$VERSION_DIR" "$CURRENT_LINK"
           
