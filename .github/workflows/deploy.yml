@@ -1,0 +1,109 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    # - name: Run tests
+    #   run: npm test
+      
+    - name: Build application
+      id: build
+      run: npm run build
+      continue-on-error: true
+      
+    - name: Check build status
+      if: steps.build.outcome != 'success'
+      run: |
+        echo "Build failed, aborting deployment"
+        exit 1
+        
+    - name: Generate deployment package
+      run: |
+        mkdir -p deploy
+        cp -r .next package.json package-lock.json next.config.js public deploy/
+        cd deploy && tar -czf ../deploy.tar.gz .
+
+    - name: Check SSH
+      run: echo ${{ secrets.EC2_HOST }}
+
+    - name: Deploy to EC2
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        source: "deploy.tar.gz"
+        target: "/tmp"
+        
+    - name: Execute deployment script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          # Create versioned deployment directory
+          DEPLOY_DIR="$HOME/app"
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          VERSION_DIR="$DEPLOY_DIR/releases/$TIMESTAMP"
+          CURRENT_LINK="$DEPLOY_DIR/current"
+          PREVIOUS_LINK="$DEPLOY_DIR/previous"
+          
+          # Ensure directories exist
+          mkdir -p "$DEPLOY_DIR/releases"
+          mkdir -p "$VERSION_DIR"
+          
+          # Extract deployment package
+          tar -xzf /tmp/deploy.tar.gz -C "$VERSION_DIR"
+          
+          # Install dependencies if needed
+          cd "$VERSION_DIR"
+          if [ -f "package-lock.json" ]; then
+            npm ci --production
+          else
+            npm install --production
+          fi
+          
+          # Save previous deployment for rollback
+          if [ -L "$CURRENT_LINK" ]; then
+            # Store previous release for rollback capability
+            rm -f "$PREVIOUS_LINK"
+            cp -P "$CURRENT_LINK" "$PREVIOUS_LINK"
+          fi
+          
+          # Switch to new version
+          rm -f "$CURRENT_LINK"
+          ln -s "$VERSION_DIR" "$CURRENT_LINK"
+          
+          # Restart application
+          # Restart application using pm2 or similar
+          # If you have a systemd service, you might need sudo to restart it
+          if command -v pm2 &> /dev/null; then
+            cd "$CURRENT_LINK" && pm2 restart ecosystem.config.js || pm2 start npm --name "it-solution" -- start
+          else
+            echo "Please manually restart your application or install pm2"
+          fi
+          
+          # Clean up
+          rm /tmp/deploy.tar.gz
+          
+          # Keep only last 5 deployments
+          cd "$DEPLOY_DIR/releases" && ls -t | tail -n +6 | xargs rm -rf || echo "No old deployments to clean up"
