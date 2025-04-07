@@ -102,7 +102,7 @@ jobs:
             echo "Please manually restart your application or install pm2"
           fi
           
-          # Clean up
+          # Clean up of temp folder
           rm /tmp/deploy.tar.gz
           
           # Keep only last 5 deployments
