@@ -517,7 +517,7 @@ export default function EcommerceSolutionsPage() {
           </div>
 
           {/* E-commerce icons overlay */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent py-6">
+          {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 to-transparent py-6">
             <div className="container mx-auto px-4">
               <div className="flex justify-center gap-8 md:gap-16">
                 <motion.div
@@ -567,7 +567,7 @@ export default function EcommerceSolutionsPage() {
                 </motion.div>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* Overview Section */}

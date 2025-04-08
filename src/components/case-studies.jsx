@@ -41,7 +41,7 @@ export default function CaseStudies({ caseStudies }) {
               <p className="text-gray-600 mb-6">{study.description}</p>
 
               <div className="grid grid-cols-3 gap-4 mb-6">
-                {study.metrics.map((metric, idx) => (
+                {study?.metrics?.map((metric, idx) => (
                   <div key={idx} className="bg-gray-50 p-4 rounded-lg text-center">
                     <p className="text-2xl font-bold text-indigo-600">{metric.value}</p>
                     <p className="text-sm text-gray-500">{metric.label}</p>

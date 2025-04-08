@@ -252,7 +252,7 @@ export default function ContactForm({ serviceOptions }) {
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent outline-none transition-all"
               >
                 <option value="">Select a service</option>
-                {serviceOptions.map((service, index) => (
+                {serviceOptions?.map((service, index) => (
                   <option key={index} value={service}>
                     {service}
                   </option>
