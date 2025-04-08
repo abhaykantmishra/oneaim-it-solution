@@ -1,7 +1,10 @@
-import React from 'react'
+import FAQClientPage from "./FAQClientPage"
 
-export default function FAQ() {
-  return (
-    <div>FAQ</div>
-  )
+export const metadata = {
+  title: "FAQ | Enterprise AI Services",
+  description: "Frequently Asked Questions about our Enterprise AI Services",
+}
+
+export default function FAQPage() {
+  return <FAQClientPage />;
 }
