@@ -598,7 +598,7 @@ export default function FinanceBankingSolutionsPage() {
                 Comprehensive Finance & Banking IT Solutions
               </h2>
               <p className="text-lg text-gray-600">
-                In today's rapidly evolving financial landscape, institutions need robust, secure, and innovative
+                In today&apos;s rapidly evolving financial landscape, institutions need robust, secure, and innovative
                 technology solutions to stay competitive, meet regulatory requirements, and exceed customer
                 expectations.
               </p>
@@ -664,7 +664,7 @@ export default function FinanceBankingSolutionsPage() {
                       Why Financial Institutions Need Specialized IT Solutions
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Financial institutions face unique challenges in today's digital landscape, including stringent
+                      Financial institutions face unique challenges in today&apos;s digital landscape, including stringent
                       regulatory requirements, sophisticated security threats, and rapidly evolving customer
                       expectations. Generic IT solutions simply cannot address these specialized needs effectively.
                     </p>
@@ -933,7 +933,7 @@ export default function FinanceBankingSolutionsPage() {
               <h3 className="text-2xl font-bold mb-4">Not Sure Which Financial Platform Is Right for You?</h3>
               <p className="text-lg mb-6">
                 Our financial technology experts can help you evaluate your options and choose the platform that best
-                fits your institution's requirements, budget, and growth plans.
+                fits your institution&apos;s requirements, budget, and growth plans.
               </p>
               <motion.button
                 className="bg-[#ff3b30] hover:bg-[#e62e24] text-white font-medium px-8 py-3 rounded-full inline-flex items-center transition-colors"
@@ -1401,7 +1401,7 @@ export default function FinanceBankingSolutionsPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>AxiomSL</li>
                     <li>Wolters Kluwer</li>
-                    <li>Moody's Analytics</li>
+                    <li>Moody&apos;s Analytics</li>
                     <li>Bloomberg</li>
                     <li>Confluence</li>
                   </ul>
@@ -1461,7 +1461,7 @@ export default function FinanceBankingSolutionsPage() {
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Financial Institution?</h2>
               <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                Let's create secure, compliant, and innovative financial technology solutions that drive growth, enhance
+                Let&apos;s create secure, compliant, and innovative financial technology solutions that drive growth, enhance
                 customer experiences, and give you a competitive edge in the digital age.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -1496,7 +1496,7 @@ export default function FinanceBankingSolutionsPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">
-                Let's Discuss Your Financial Technology Project
+                Let&apos;s Discuss Your Financial Technology Project
               </h2>
               <p className="text-lg text-gray-600">
                 Fill out the form below to schedule a free consultation with one of our financial technology experts.
