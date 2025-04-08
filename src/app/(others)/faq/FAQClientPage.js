@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function FAQClientPage() {
   return (
     <main className="min-h-screen bg-white">
-        
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-[#ff3b30] to-[#ff8e88] py-20 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -70,7 +70,7 @@ export default function FAQClientPage() {
           >
             <h2 className="text-3xl font-bold text-[#1e2942] mb-4">Browse by Category</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Select a category to find the answers you're looking for
+              Select a category to find the answers you&apos;re looking for
             </p>
           </motion.div>
           
