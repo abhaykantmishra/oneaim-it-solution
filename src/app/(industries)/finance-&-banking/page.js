@@ -787,7 +787,7 @@ export default function FinanceBankingSolutionsPage() {
               </motion.div>
 
               {financeSolutions.map((solution) => (
-                <TabsContent key={solution.id} value={solution.id} className="mt-0">
+                <TabsContent key={solution.id} value={solution.id} className="mt-2 md:mt-4 mx-4">
                   <motion.div
                     className="grid md:grid-cols-2 gap-8 items-center"
                     initial={{ opacity: 0, x: 0 }}
