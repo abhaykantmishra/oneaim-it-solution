@@ -4,8 +4,8 @@ import { Github, Twitter, Linkedin } from "lucide-react"
 const footerLinks = {
   Services: ["Cloud Services", "Development Services", "Ai-Ml Services", "Digital Marketing"],
   Industries: ["Automobile", "E-Commerce", "Telecommunication", "Education", "Healthcare", "Government & Defense", "Finance & Banking" ],
-  Company: ["About", "FAQ", "Careers", "Blog", "Contact"],
-  Legal: ["Privacy", "Terms", "Security", "Cookies"],
+  Company: ["About", "FAQ", "Blog", "Contact"],
+  Legal: ["Privacy", "Terms"],
 }
 
 export default function Footer() {
