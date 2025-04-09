@@ -52,7 +52,7 @@ export default function UnderDevelopmentPage() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mx-auto mb-8 max-w-2xl text-lg text-white/90 md:text-xl"
             >
-              We're working hard to bring you something amazing. This page is currently under construction and will be
+              We&apos;re working hard to bring you something amazing. This page is currently under construction and will be
               available soon.
             </motion.p>
 
@@ -85,7 +85,7 @@ export default function UnderDevelopmentPage() {
             </div>
 
             <p className="mb-8 text-center text-gray-600">
-              We're putting the finishing touches on this page. Check back in a few days to see what we've been working
+              We&apos;re putting the finishing touches on this page. Check back in a few days to see what we&apos;ve been working
               on!
             </p>
 
@@ -124,7 +124,7 @@ export default function UnderDevelopmentPage() {
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">What to Expect</h2>
             <p className="mx-auto max-w-2xl text-gray-600">
-              Here's a sneak peek at some of the features we're working on for this page.
+              Here&apos;s a sneak peek at some of the features we&apos;re working on for this page.
             </p>
           </motion.div>
 
@@ -175,7 +175,7 @@ export default function UnderDevelopmentPage() {
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Stay Updated</h2>
             <p className="mx-auto max-w-2xl text-gray-600">
-              Want to know when this page goes live? Leave your email and we'll notify you.
+              Want to know when this page goes live? Leave your email and we&apos;ll notify you.
             </p>
           </motion.div>
 
