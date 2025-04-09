@@ -247,7 +247,7 @@ export default function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
         } ${pullRefresh ? "shadow-lg" : ""} bg-[#1e2942] text-white`}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0 mx-1">
             <p className="font-extrabold text-3xl text-[#ff3b30] font-mono">OneAim</p>

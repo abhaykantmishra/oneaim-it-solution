@@ -140,7 +140,7 @@ export default function AiMlServices() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-white py-16 px-4 md:px-6 lg:px-8">
+      <section className="bg-white pt-32 pb-10 px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Software Development Services</h1>
@@ -165,7 +165,7 @@ export default function AiMlServices() {
 
       {/* Logo Ticker */}
       <section className="py-8 md:py-12 bg-white">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
             <motion.div
               className="flex gap-14 flex-none pr-14"
@@ -190,7 +190,7 @@ export default function AiMlServices() {
             The smartest way to work with AI is to ask where it fits and how to gain the most from it. That&apos;s where we step in.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-7xl mx-auto mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featureCards.map((card, i) => (
             <div key={i} className={`${card.bg} rounded-lg p-6 text-center transition hover:shadow-lg`}>
               {card.icon}
@@ -201,9 +201,9 @@ export default function AiMlServices() {
       </section>
 
       {/* AI Service Suite Carousel */}
-      <section className="relative flex flex-col items-center h-screen bg-rose-50 overflow-hidden py-10">
+      <section className="relative flex flex-col items-center md:h-screen 2xl:h-1/2 bg-rose-50 overflow-hidden py-10">
         <h2 className="text-black text-3xl font-bold mb-6">Our AI Service Suite</h2>
-        <div className="relative w-full max-w-3xl h-[480px] flex justify-center items-center">
+        <div className="relative max-w-3xl h-[550px] flex justify-center items-center">
           {cards.map((card, index) => {
             const offset = (index - currentIndex + cards.length) % cards.length;
             let scale = offset === 0 ? 1 : 0.85;
@@ -211,7 +211,7 @@ export default function AiMlServices() {
             let xTranslate = (offset - (offset > cards.length / 2 ? cards.length : 0)) * 120;
 
             return (
-              <motion.div key={index} className="absolute w-80 h-[420px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center"
+              <motion.div key={index} className="absolute w-80  md:w-96 h-[500px] bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center"
                 initial={{ x: xTranslate, scale, opacity }}
                 animate={{ x: xTranslate, scale, opacity }}
                 transition={{ duration: 0.5 }}
@@ -219,8 +219,8 @@ export default function AiMlServices() {
               >
                 <img src={card.imageUrl} alt={card.title} className="w-full h-40 object-cover rounded-md" />
                 <h3 className="mt-4 text-lg font-bold">{card.title}</h3>
-                <p className="mt-2 text-sm text-gray-700">{card.description}</p>
-                <ul className="mt-3 text-xs text-gray-600 text-left list-disc pl-5">
+                <p className="mt-2 text-gray-700">{card.description}</p>
+                <ul className="mt-3 text-base text-gray-600 text-left list-disc pl-5">
                   {card.points.map((point, idx) => <li key={idx}>{point}</li>)}
                 </ul>
               </motion.div>
@@ -242,7 +242,7 @@ export default function AiMlServices() {
             </div>
           ))}
         </div>
-        <div className="bg-indigo-50 p-8 mt-12 rounded-xl">
+        <div className="max-w-7xl mx-auto bg-indigo-50 p-8 mt-12 rounded-xl">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">High-Impact Use Cases of Our AI Software Development Services</h2>
           <p className="text-lg text-gray-600 mb-8">
             From autonomous systems to AI-driven decision-making, our solutions drive innovation, efficiency, and transformation.

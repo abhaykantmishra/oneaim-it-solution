@@ -5,20 +5,21 @@ import { ChevronDown, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import FAQ from "@/components/faq"
 
 export default function FAQClientPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen ">
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#ff3b30] to-[#ff8e88] py-20 overflow-hidden">
+      <section className=" relative bg-gradient-to-r from-red-400 to-red-600 py-40 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +38,7 @@ export default function FAQClientPage() {
       
       {/* Search Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +62,7 @@ export default function FAQClientPage() {
       
       {/* FAQ Categories */}
       <section className="py-16">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,14 +75,14 @@ export default function FAQClientPage() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {faqCategories.map((category, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 text-center cursor-pointer"
+                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 text-center cursor-pointer mx-3 my-4 border border-1 border-red-500"
               >
                 <div className="w-16 h-16 bg-[#fff0f0] rounded-full flex items-center justify-center mx-auto mb-4">
                   {category.icon}
@@ -99,7 +100,7 @@ export default function FAQClientPage() {
       
       {/* General Questions */}
       <section id="general" className="py-16 bg-gray-50">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,32 +112,14 @@ export default function FAQClientPage() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            {generalFaqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="mb-4 group"
-              >
-                <details className="group">
-                  <summary className="flex justify-between items-center p-6 rounded-xl bg-white shadow-sm cursor-pointer group-hover:bg-gray-50 transition-all">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#1e2942]">{faq.question}</h3>
-                    <ChevronDown className="w-5 h-5 text-[#1e2942] transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="p-6 bg-white rounded-b-xl border-t border-gray-100">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                </details>
-              </motion.div>
-            ))}
+            <FAQ faqs={generalFaqs} />
           </div>
         </div>
       </section>
       
       {/* Services Questions */}
       <section id="services" className="py-16">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -148,32 +131,14 @@ export default function FAQClientPage() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            {servicesFaqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="mb-4 group"
-              >
-                <details className="group">
-                  <summary className="flex justify-between items-center p-6 rounded-xl bg-white shadow-sm cursor-pointer group-hover:bg-gray-50 transition-all">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#1e2942]">{faq.question}</h3>
-                    <ChevronDown className="w-5 h-5 text-[#1e2942] transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="p-6 bg-white rounded-b-xl border-t border-gray-100">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                </details>
-              </motion.div>
-            ))}
+            <FAQ faqs={servicesFaqs} />
           </div>
         </div>
       </section>
       
       {/* Technical Questions */}
       <section id="technical" className="py-16 bg-gray-50">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -185,38 +150,20 @@ export default function FAQClientPage() {
           </motion.div>
           
           <div className="max-w-4xl mx-auto">
-            {technicalFaqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="mb-4 group"
-              >
-                <details className="group">
-                  <summary className="flex justify-between items-center p-6 rounded-xl bg-white shadow-sm cursor-pointer group-hover:bg-gray-50 transition-all">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#1e2942]">{faq.question}</h3>
-                    <ChevronDown className="w-5 h-5 text-[#1e2942] transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="p-6 bg-white rounded-b-xl border-t border-gray-100">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                </details>
-              </motion.div>
-            ))}
+            <FAQ faqs={technicalFaqs} />
           </div>
         </div>
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#ff3b30] to-[#ff8e88] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-red-500 to-red-700 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -230,12 +177,16 @@ export default function FAQClientPage() {
               Our team is ready to help you with any additional questions you may have about our services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-[#ff3b30] hover:bg-gray-100 text-lg px-8 py-6 h-auto">
+              <Link href="/contact">
+              <Button className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-6 h-auto">
                 Contact Us
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6 h-auto">
+              </Link>
+              <Link href="/contact">
+              <Button variant="outline" className="border-white text-black hover:bg-white/10 text-lg px-8 py-6 h-auto">
                 Schedule a Demo
               </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

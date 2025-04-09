@@ -13,14 +13,14 @@ export default function PrivacyPolicyClientPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#ff3b30] to-[#ff8e88] py-16 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-red-400 to-red-600 pt-40 pb-20 overflow-hidden ">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function PrivacyPolicyClientPage() {
 
       {/* Quick Links */}
       <section className="py-8 bg-gray-50 border-b">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,6 @@ export default function PrivacyPolicyClientPage() {
             <Link href="#overview" className="text-[#ff3b30] hover:underline font-medium">
               Overview
             </Link>
-            <span className="text-[#ff3b30] hover:underline font-medium">Overview</span>
             <span className="text-gray-300">|</span>
             <Link href="#information-collection" className="text-[#ff3b30] hover:underline font-medium">
               Information Collection
@@ -76,12 +75,13 @@ export default function PrivacyPolicyClientPage() {
 
       {/* Content */}
       <section className="py-16">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="max-w-7xl flex flex-col justify-start items-start"
             >
               <div id="overview" className="mb-12">
                 <h2 className="text-2xl font-bold text-[#1e2942] mb-4">1. Overview</h2>
@@ -270,7 +270,7 @@ export default function PrivacyPolicyClientPage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -283,7 +283,9 @@ export default function PrivacyPolicyClientPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               Our team is ready to assist you with any questions or concerns regarding your privacy
             </p>
-            <Button className="bg-[#ff3b30] hover:bg-[#e0352b] text-white text-lg px-8 py-6 h-auto">Contact Us</Button>
+            <Link href={'/contact'}>
+              <Button className="bg-[#ff3b30] hover:bg-[#e0352b] text-white text-lg px-8 py-6 h-auto">Contact Us</Button>
+            </Link>
           </motion.div>
         </div>
       </section>
