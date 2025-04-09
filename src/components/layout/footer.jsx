@@ -5,11 +5,11 @@ const footerLinks = {
   Services: ["Cloud Services", "Development Services", "Ai-Ml Services", "Digital Marketing"],
   Industries: ["Automobile", "E-Commerce", "Telecommunication", "Education", "Healthcare", "Government & Defense", "Finance & Banking" ],
   Company: ["About", "FAQ", "Blog", "Contact"],
-  Legal: ["Privacy", "Terms"],
+  Legal: ["Privacy", "Terms",],
 }
 
 export default function Footer() {
-  
+
   return (
     <footer className="bg-slate-900 py-20 px-4">
       <div className="container mx-auto">
