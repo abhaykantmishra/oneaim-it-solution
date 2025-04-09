@@ -2,6 +2,10 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
+import CaseStudies from "@/components/case-studies";
+import FAQ from "@/components/faq";
+import ContactForm from "@/components/contact-form";
+
 
 export default function AiMlServices() {
   const sectionRef = useRef(null);
@@ -136,6 +140,78 @@ export default function AiMlServices() {
       ),
     },
   ];
+
+  const faqs = [
+    {
+      question: "What cloud platforms do you support?",
+      answer:
+        "We support all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and IBM Cloud. Our team is certified in these platforms and can help you choose the right one for your specific business needs.",
+    },
+    {
+      question: "How do you ensure data security in the cloud?",
+      answer:
+        "We implement multiple layers of security including encryption at rest and in transit, identity and access management, network security, and regular security audits. We also stay compliant with industry standards like GDPR, HIPAA, and SOC 2.",
+    },
+    {
+      question: "Can you help migrate our existing infrastructure to the cloud?",
+      answer:
+        "Yes, we offer comprehensive cloud migration services. Our approach includes assessment, planning, migration execution, and post-migration optimization to ensure a smooth transition with minimal disruption to your business operations.",
+    },
+    {
+      question: "What is your approach to cloud cost optimization?",
+      answer:
+        "We implement right-sizing, scheduled scaling, reserved instances, and continuous monitoring to optimize your cloud costs. Our FinOps practices ensure you get maximum value from your cloud investment while maintaining performance and reliability.",
+    },
+    {
+      question: "Do you offer 24/7 cloud support and monitoring?",
+      answer:
+        "Yes, we provide round-the-clock monitoring and support for all our cloud services. Our dedicated team is always available to address any issues that may arise, ensuring your systems remain operational at all times.",
+    },
+    {
+      question: "How do you handle cloud disaster recovery?",
+      answer:
+        "Our disaster recovery solutions include regular backups, multi-region deployment strategies, automated failover mechanisms, and comprehensive recovery plans. We test these systems regularly to ensure they work when you need them most.",
+    },
+  ]
+
+  const caseStudies = [
+    {
+      title: "E-commerce Revenue Growth",
+      industry: "Retail",
+      description:
+        "Implemented a comprehensive digital marketing strategy for an e-commerce retailer, including Google Shopping ads, Meta retargeting, and SEO. Resulted in a 215% increase in online revenue and 180% growth in ROAS (Return on Ad Spend) within 6 months.",
+      metrics: [
+        { label: "Revenue Increase", value: "215%" },
+        { label: "ROAS Improvement", value: "180%" },
+        { label: "Conversion Rate", value: "4.8%" },
+      ],
+      // image: "/images/case-study-ecommerce.png",
+    },
+    {
+      title: "B2B Lead Generation Campaign",
+      industry: "SaaS",
+      description:
+        "Developed and executed a multi-channel lead generation campaign for a B2B SaaS company, focusing on LinkedIn Ads, Google Search, and content marketing. Generated 430+ qualified leads in the first quarter, resulting in 28 new enterprise clients.",
+      metrics: [
+        { label: "Qualified Leads", value: "430+" },
+        { label: "Cost Per Lead", value: "-42%" },
+        { label: "New Clients", value: "28" },
+      ],
+      // image: "/images/case-study-b2b.png",
+    },
+    {
+      title: "Local Business Visibility Boost",
+      industry: "Healthcare",
+      description:
+        "Implemented local SEO and Google Business Profile optimization for a healthcare provider with multiple locations. Achieved first-page rankings for 45 high-value keywords and increased organic traffic by 320%, resulting in a 75% increase in appointment bookings.",
+      metrics: [
+        { label: "Keyword Rankings", value: "45" },
+        { label: "Organic Traffic", value: "+320%" },
+        { label: "Appointment Bookings", value: "+75%" },
+      ],
+      // image: "/images/case-study-local.png",
+    },
+  ]
 
   return (
     <div>
@@ -274,6 +350,58 @@ export default function AiMlServices() {
           </div>
         </div>
       </section>
+
+
+      {/* Case Studies Section */}
+      <section className="w-full py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">Success Stories</h2>
+            <p className="text-lg text-gray-600">
+              Explore how our AI & ML IT solutions have helped businesses like yours achieve remarkable results.
+            </p>
+          </div>
+          <CaseStudies caseStudies={caseStudies} />
+        </div>
+      </section>
+
+      {/* faq section  */}
+      <section className="w-full py-16 md:py-24 bg-[#f8f9fc]">
+        <div className="container mx-auto px-4">
+          <div
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">
+              Frequently Asked Questions About AI-ML Services
+            </h2>
+            <p className="text-lg text-gray-600">
+              Find answers to common questions about our AI & ML IT services and how we can help your
+              project thrive in the AI age.
+            </p>
+          </div>
+          <FAQ faqs={faqs} />
+        </div>
+      </section>
+
+      {/* contact form  */}
+      <section id="contact" className="w-full py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1e2942] mb-6">
+              Let&apos;s Discuss Your Project
+            </h2>
+            <p className="text-lg text-gray-600">
+              Fill out the form below to schedule a free consultation with one of our AI-ML experts.
+            </p>
+          </div>
+          <ContactForm serviceOptions={featureCards.map((service) => service.title)} />
+        </div>
+      </section>
+
     </div>
   );
 }

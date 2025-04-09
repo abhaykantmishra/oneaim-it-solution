@@ -152,7 +152,7 @@ const IndustriesItems = [
   {
     title: "Automobile",
     href: "/automobile",
-    description: "Automobile technology solutions",
+    description: "Automobile technology solutions for providers and consumers",
   },
   {
     title: "Telecommunications",
