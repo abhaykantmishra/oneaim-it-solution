@@ -43,7 +43,7 @@ export default function UnderDevelopmentPage() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
             >
-              Page Under Development
+              Page Under Development Now
             </motion.h1>
 
             <motion.p
