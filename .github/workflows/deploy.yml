@@ -67,7 +67,7 @@ jobs:
           CURRENT_LINK="$DEPLOY_DIR/current"
           PREVIOUS_LINK="$DEPLOY_DIR/previous"
           
-          # Ensure directories exist
+          # Ensure directories exists
           mkdir -p "$DEPLOY_DIR/releases"
           mkdir -p "$VERSION_DIR"
           
